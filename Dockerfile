@@ -14,3 +14,5 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
     apt-get update && \
     apt-get install --yes --no-install-recommends gh
 RUN mkdir /home/jenkins/.vnc && (echo jenkins; echo jenkins; echo "n") | vncpasswd /home/jenkins/.vnc/passwd
+RUN touch /home/jenkins/.vnc/xstartup && chmod a+x /home/jenkins/.vnc/xstartup
+RUN echo "exec /etc/X11/Xsession" > /home/jenkins/.Xsession && chmod +x /home/jenkins/.Xsession
