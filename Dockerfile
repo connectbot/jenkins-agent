@@ -18,3 +18,4 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 RUN mkdir /home/jenkins/.vnc && \
     (echo jenkins; echo jenkins; echo "n") | vncpasswd /home/jenkins/.vnc/passwd && \
     chown -R jenkins /home/jenkins
+RUN groupadd -g 102 -r kvm && usermod -aG kvm jenkins
