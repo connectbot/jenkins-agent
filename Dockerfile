@@ -11,9 +11,15 @@ RUN apt-get update && \
     tigervnc-standalone-server \
     tigervnc-common \
     fluxbox \
-    libpulse0
+    libfontconfig \
+    libglu1 \
+    libnss3 \
+    libxcomposite1 \
+    libxcursor1 \
+    libpulse0 \
+    libasound2
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg && \
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list && \
     apt-get update && \
     apt-get install --yes --no-install-recommends gh
 RUN mkdir /home/jenkins/.vnc && \
