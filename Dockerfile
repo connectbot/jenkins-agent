@@ -25,6 +25,7 @@ RUN apt-get update && \
     libxi6 \
     libxext6 \
     libxfixes3 \
+    libxtst6 \
     zlib1g \
     libgl1
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg && \
