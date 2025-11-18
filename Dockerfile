@@ -30,6 +30,6 @@ RUN curl -L https://dl.google.com/android/repository/commandlinetools-linux-1311
     && unzip commandlinetools-linux-latest.zip -d /opt/android-sdk/cmdline-tools \
     && mv /opt/android-sdk/cmdline-tools/cmdline-tools /opt/android-sdk/cmdline-tools/latest
 
-RUN yes | /opt/android-sdk/cmdline-tools/latest/sdkmanager 'build-tools;36.1.0'
+RUN yes | /opt/android-sdk/cmdline-tools/latest/bin/sdkmanager 'build-tools;36.1.0'
 
 USER ${user}
