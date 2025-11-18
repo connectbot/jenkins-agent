@@ -28,7 +28,7 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
 RUN curl -L https://dl.google.com/android/repository/commandlinetools-linux-13114758_latest.zip -o commandlinetools-linux-latest.zip \
     && mkdir -p /opt/android-sdk/cmdline-tools \
     && unzip commandlinetools-linux-latest.zip -d /opt/android-sdk/cmdline-tools \
-    && mv /opt/android-sdk/cmdline-tools/cmdline-toolls /opt/android-sdk/cmdline-tools/latest
+    && mv /opt/android-sdk/cmdline-tools/cmdline-tools /opt/android-sdk/cmdline-tools/latest
 
 RUN yes | /opt/android-sdk/cmdline-tools/latest/sdkmanager 'build-tools;36.1.0'
 
