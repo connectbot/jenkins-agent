@@ -1,4 +1,4 @@
-FROM jenkins/agent:3148.v532a_7e715ee3-2-jdk17
+FROM jenkins/agent:3345.v03dee9b_f88fc-7-jdk17
 
 ARG user=jenkins
 
