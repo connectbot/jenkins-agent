@@ -6,18 +6,19 @@ USER root
 
 RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
-    git \
-    gnupg \
+    apksigner \
     ca-certificates \
     curl \
-    zlib1g \
+    git \
+    gnupg \
+    jq \
+    python3-pip \
+    python3-venv \
     unzip \
     wget \
-    jq \
-    python3-venv \
-    python3-pip \
     zipalign \
-    apksigner
+    zlib1g \
+    zstd
 
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
     && chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
